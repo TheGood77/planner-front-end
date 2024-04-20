@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { toast } from 'sonner'
 
-import { Box, TextField, Button, Typography } from '@mui/material';
+import { Box, TextField, Button, Typography } from '@mui/material'
 
 import { IAuthForm } from '@/types/auth.types'
 
@@ -37,7 +37,7 @@ export function Auth() {
             push(DASHBOARD_PAGES.HOME)
         },
         onError() {
-            toast.error('Please check email/password!')
+            toast.error('Invalid email/password, try again')
             reset()
         }
     })
@@ -66,7 +66,6 @@ export function Auth() {
                 Auth Form
             </Typography>
             <TextField
-                fullWidth
                 id='email'
                 type='email'
                 label='Email:'
@@ -82,21 +81,9 @@ export function Auth() {
                 })}
                 helperText={errors.email?.message?.toString()}
                 margin='normal'
-                sx={{
-                    input: { 
-                        '&::placeholder': { color: 'white' }, 
-                        color: 'white' 
-                    },
-                    '& label': { color: 'white' },
-                    '& label.Mui-focused': { color: 'white' },
-                    '& .MuiOutlinedInput-root': {
-                        '& fieldset': { borderColor: 'white' },
-                        '&:hover fieldset': { borderColor: 'white' },
-                    },
-                }}
+                className='custom-textfield'
             />
             <TextField
-                fullWidth
                 id='password'
                 type='password'
                 label='Password:'
@@ -111,19 +98,8 @@ export function Auth() {
                 })}
                 helperText={errors.password?.message?.toString()}
                 margin='normal'
-                sx={{
-                    input: { 
-                        '&::placeholder': { color: 'white' }, 
-                        color: 'white' 
-                    },
-                    '& label': { color: 'white' },
-                    '& label.Mui-focused': { color: 'white' },
-                    '& .MuiOutlinedInput-root': {
-                        '& fieldset': { borderColor: 'white' },
-                        '&:hover fieldset': { borderColor: 'white' },
-                    }, 
-                    mt: 2
-                }}
+                className='custom-textfield'
+                sx={{ mt: 2 }}
             />
             <Button
                 type='submit'

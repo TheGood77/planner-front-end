@@ -31,3 +31,31 @@ body {
     text-wrap: balance;
   }
 }
+
+.custom-textfield {
+  width: 100%;
+}
+
+.custom-textfield input::placeholder {
+  color: white;
+}
+
+.custom-textfield input {
+  color: white;
+}
+
+.custom-textfield label {
+  color: white;
+}
+
+.custom-textfield label.Mui-focused {
+  color: white;
+}
+
+.custom-textfield .MuiOutlinedInput-root fieldset {
+  border-color: white;
+}
+
+.custom-textfield .MuiOutlinedInput-root:hover fieldset {
+  border-color: white;
+}
