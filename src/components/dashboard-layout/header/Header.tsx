@@ -1,0 +1,29 @@
+'use client'
+
+import { useProfile } from '@/hooks/useProfile'
+import CircularProgress from '@mui/material/CircularProgress'
+
+export function Header() {
+    const { data, isLoading } = useProfile()
+
+    return (
+        <header>
+            <div className='absolute top-big-layout right-big-layout'>
+                {isLoading ? (
+                    <CircularProgress />
+                ) : (
+                    <div className='flex items-center'>
+                        <div className='text-right mr-3'>
+                            <p className='font-bold -mb-1'>{data?.user.name}</p>
+                            <p className='text-sm opacity-40'>{data?.user.email}</p>
+                        </div>
+
+                        <div className='w-10 h-10 flex justify-center items-center text-2xl text-white bg-white/20 rounded uppercase'>
+                            {data?.user.name?.charAt(0) || 'A'}
+                        </div>
+                    </div>
+                )}
+            </div>
+        </header>
+    )
+}
