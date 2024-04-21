@@ -9,6 +9,8 @@ import { useTimer } from './hooks/useTimer'
 import { useTimerActions } from './hooks/useTimerActions'
 import { useTodaySession } from './hooks/useTodaySession'
 import { PomodoroRounds } from './rounds/PomodoroRounds'
+import { useEffect } from 'react'
+import { toast } from 'sonner'
 
 export function Pomodoro() {
 	const timerState = useTimer()
@@ -22,6 +24,20 @@ export function Pomodoro() {
 	const { deleteSession, isDeletePending } = useDeleteSession(() =>
 		timerState.setSecondsLeft(workInterval * 60)
 	)
+
+    const handleNextRound = () => {
+        if (timerState.isBreakTime) {
+            actions.nextRoundHandler()
+            toast.info("Go to work!")
+        }
+        else toast.info("Go to break!")
+    }
+
+    useEffect(() => {
+        if (timerState.secondsLeft === 0) {
+            handleNextRound()
+        }
+    }, [timerState.secondsLeft])
 
 	return (
 		<div className='relative w-80 text-center'>

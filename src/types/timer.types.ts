@@ -6,6 +6,7 @@ export interface ITimerState {
 	isRunning: boolean
 	secondsLeft: number
 	activeRound: IPomodoroRoundResponse | undefined
+    isBreakTime: boolean
 
 	setIsRunning: Dispatch<SetStateAction<boolean>>
 	setSecondsLeft: Dispatch<SetStateAction<number>>
