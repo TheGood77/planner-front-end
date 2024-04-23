@@ -20,15 +20,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <Providers>
-					{children}
+        <Providers>
+          {children}
 
-					<Toaster
-						theme='system'
+          <Toaster
+            theme='system'
             position='bottom-right'
-						duration={2000}
-					/>
-				</Providers>  
+            duration={2000}
+          />
+        </Providers>
       </body>
     </html>
   );
