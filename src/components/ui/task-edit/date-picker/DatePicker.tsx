@@ -31,30 +31,21 @@ export function DatePicker({ onChange, value }: IDatePicker) {
 			onChange('')
 		}
 	}
-
 	return (
-		<div
-			className='relative'
-			ref={ref}
-		>
+		<div className='relative' ref={ref}>
 			<button onClick={() => setIsShow(!isShow)}>
 				{value ? dayjs(value).format('LL') : 'Click for select'}
 			</button>
 			{value && (
 				<button
-					className='absolute -top-2 -right-4 opacity-30 hover:opacity-100 transition-opacity'
+					className='button-clear'
 					onClick={() => onChange('')}
 				>
 					<ClearIcon />
 				</button>
 			)}
 			{isShow && (
-				<div
-					className='absolute p-2.5 slide bg-sidebar z-10 shadow rounded-lg -left-4'
-					style={{
-						top: 'calc(100% + .7rem)'
-					}}
-				>
+				<div className='datepicker-dropdown'>
 					<DayPicker
 						fromYear={2023}
 						toYear={2025}

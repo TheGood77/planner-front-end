@@ -1,0 +1,23 @@
+.dashboardContainer {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+  
+.mainContent {
+    padding: 2.3rem;
+    max-height: 100vh;
+    position: relative;
+}
+  
+@media (min-width: 1280px) { 
+  .dashboardContainer {
+    grid-template-columns: 1.1fr 6fr;
+  }
+}
+  
+@media (max-width: 1279px) {
+  .dashboardContainer {
+    grid-template-columns: 1.2fr 6fr;
+  }
+}

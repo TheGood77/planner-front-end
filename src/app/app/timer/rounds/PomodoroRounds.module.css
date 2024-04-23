@@ -2,28 +2,29 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 2;
+	gap: 0.5rem;
 }
 
 .roundsContainer {
 	display: flex;
-	gap: 3;
+	gap: 0.5rem;
 	align-items: center;
 	justify-content: center;
-	margin-top: 1;
+	margin-top: 0.5rem;
 }
 
 .button {
-	opacity: 0.2;
+	opacity: 20%;
 	transition: opacity;
-	margin-top: 1;
+	margin-top: 0.5rem;
 }
 .button:hover {
-	opacity: 1;
+	opacity: 100%;
 }
 .button:disabled {
-	opacity: 0.2;
+	opacity: 20%;
 }
+
 .round {
 	border-radius: 0.25rem;
 	border-width: 1px;
@@ -38,8 +39,8 @@
 	transition: all 300ms;
 	content: '';
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 0rem;
+	left: 0rem;
 	width: 0%;
 	height: 100%;
 }

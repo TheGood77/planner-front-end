@@ -58,7 +58,7 @@
 .parentsWrapper .row.completed > div > span > input {
 	font-style: italic;
 	text-decoration: line-through;
-	opacity: 0.5;
+	opacity: 50%;
 }
 
 .parentsWrapper .row:hover {
@@ -66,13 +66,35 @@
 }
 
 .parentsWrapper .row > div > span .grip {
-	opacity: 0.2;
+	opacity: 20%;
 	transition: opacity 0.3s;
-	margin-left: -0.75rem;
+	margin-left: -0.25rem;
 	margin-right: -0.25rem;
 }
 
 .parentsWrapper .row > div > span .grip:hover,
 .parentsWrapper .row > div > span .grip:active {
-	opacity: 1;
+	opacity: 100%;
 }
+
+.parentsWrapper .addButton {
+	font-style: italic;
+	opacity: 40%;
+	font-size: 1rem; 
+}
+
+.itemRow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.1rem;
+	width: 100%;
+}
+
+.deleteButton {
+	opacity: 50%;
+	transition: opacity 0.3s ease;
+  }
+  
+.deleteButton:hover {
+	opacity: 100%;
+ }

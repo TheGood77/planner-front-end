@@ -6,3 +6,31 @@
     margin: 0.25rem;
     font-size: 85%;
 }
+
+.relative {
+    position: relative;
+}
+  
+.button-clear {
+    position: absolute;
+    top: -0.5rem;
+    right: -1rem;
+    opacity: 30%;
+    transition: opacity 300ms ease;
+}
+  
+.button-clear:hover {
+    opacity: 100%;
+}
+  
+.datepicker-dropdown {
+    position: absolute;
+    padding: 1rem;
+    background-color: #1E1F1F;
+    z-index: 10;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0.5rem;
+    left: -1rem;
+    top: 100%;
+    margin-top: 1rem;
+}

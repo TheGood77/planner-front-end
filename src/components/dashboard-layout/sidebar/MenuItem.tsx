@@ -1,13 +1,14 @@
 import Link from 'next/link'
 
 import { IMenuItem } from './menu.interface'
+import styles from './Sidebar.module.css'
 
 export function MenuItem({ item }: { item: IMenuItem }) {
 	return (
 		<div>
 			<Link
 				href={item.link}
-				className='flex gap-2.5 items-center py-1.5 mt-2 px-layout transition-colors hover:bg-border rounded-lg'
+				className={styles.link}
 			>
 				<item.icon />
 				<span>{item.name}</span>

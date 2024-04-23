@@ -1,0 +1,38 @@
+.headerContainer {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+}
+  
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+  
+.userInfoText {
+    text-align: right;
+    margin-right: 1rem;
+}
+  
+.userName {
+    font-weight: bold;
+    margin-bottom: -0.25rem;
+}
+  
+.userEmail {
+    font-size: 1rem;
+    opacity: 40%;
+}
+  
+.userInitial {
+    width: 3rem; 
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+}

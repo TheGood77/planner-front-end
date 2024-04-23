@@ -5,6 +5,7 @@ import { Logout } from '@mui/icons-material'
 import { useRouter } from 'next/navigation'
 
 import { authService } from '@/services/auth.service'
+import styles from './Sidebar.module.css'
 
 export function LogoutButton() {
 	const router = useRouter()
@@ -16,9 +17,9 @@ export function LogoutButton() {
 	})
 
 	return (
-		<div className='absolute top-1 right-1'>
+		<div className={styles.logoutButtonContainer}>
 			<button
-				className='opacity-20 hover:opacity-100 transition-opacity duration-300'
+				className={styles.logoutButton}
 				onClick={() => mutate()}
 			>
 				<Logout />

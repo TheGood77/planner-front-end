@@ -26,7 +26,7 @@ export function ListRowParent({ value, items, label, setItems }: IListRowParent)
                     {...provided.droppableProps}
                 >
                     <div className={styles.colHeading}>
-                        <div className='w-full'>{label}</div>
+                        <div className={styles.table}>{label}</div>
                     </div>
 
                     {filterTasks(items, value)?.map((item, index) => (

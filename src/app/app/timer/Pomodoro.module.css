@@ -1,0 +1,32 @@
+.pomodoroContainer {
+    position: relative;
+    width: 20rem;
+    text-align: center;
+}
+
+.timerDisplay {
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.PauseButton {
+    margin-top: 1.5rem;
+    opacity: 80%;
+    transition: opacity 250ms ease-in-out;
+}
+
+.PauseButton:hover {
+    opacity: 100%;
+}
+
+.SyncButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity: 40%;
+    transition: opacity 250ms ease-in-out;
+}
+
+.SyncButton:hover {
+    opacity: 90%;
+}

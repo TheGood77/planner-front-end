@@ -30,7 +30,7 @@ export function ListAddRowInput({ setItems, filterDate }: IListAddRowInput) {
 		<div className={styles.addRow}>
 			<button
 				onClick={addRow}
-				className='italic opacity-40 text-sm'
+				className={styles.addButton}
 			>
 				Add task...
 			</button>

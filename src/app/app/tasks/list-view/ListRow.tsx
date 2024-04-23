@@ -1,4 +1,3 @@
-import cn from 'clsx'
 import { DragIndicator, Sync, Delete } from '@mui/icons-material'
 import type { Dispatch, SetStateAction } from 'react'
 import { Controller, useForm } from 'react-hook-form'
@@ -20,6 +19,7 @@ interface IListRow {
 	setItems: Dispatch<SetStateAction<ITaskResponse[] | undefined>>
 }
 
+
 export function ListRow({ item, setItems }: IListRow) {
 	const { register, control, watch } = useForm<TypeTaskFormState>({
 		defaultValues: {
@@ -34,16 +34,14 @@ export function ListRow({ item, setItems }: IListRow) {
 
 	const { deleteTask, isDeletePending } = useDeleteTask()
 
+	const isCompletedClass = watch('isCompleted') ? styles.completed : '';
+
 	return (
 		<div
-			className={cn(
-				styles.row,
-				watch('isCompleted') ? styles.completed : '',
-				'animation-opacity'
-			)}
+			className={`${styles.row} ${isCompletedClass} animation-opacity`}
 		>
 			<div>
-				<span className='inline-flex items-center gap-2.5 w-full'>
+				<span className={styles.itemRow}>
 					<button aria-describedby='todo-item'>
 						<DragIndicator className={styles.grip} />
 					</button>
@@ -96,7 +94,7 @@ export function ListRow({ item, setItems }: IListRow) {
 					onClick={() =>
 						item.id ? deleteTask(item.id) : setItems(prev => prev?.slice(0, -1))
 					}
-					className='opacity-50 transition-opacity hover:opacity-100'
+					className={styles.deleteButton}
 				>
 					{isDeletePending ? <Sync /> : <Delete />}
 				</button>

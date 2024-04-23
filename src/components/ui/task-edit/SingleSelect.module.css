@@ -1,0 +1,46 @@
+.singleSelectContainer {
+    position: relative;
+    min-width: 10rem;
+  }
+  
+.wMax {
+    width: max-content;
+}
+  
+.clearButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 30%;
+    transition: opacity 300ms ease;
+}
+  
+.clearButton:hover {
+    opacity: 100%;
+}
+  
+.optionsDropdown {
+    position: absolute;
+    width: 100%;
+    padding: 1rem;
+    left: 0;
+    background-color: #0e0f0f;
+    z-index: 10;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    top: 100%;
+    margin-top: 0.5rem;
+}
+  
+.optionButton {
+    display: block;
+    margin-bottom: 1rem;
+}
+  
+.optionButton:last-child {
+    margin-bottom: 0;
+}
+  
+.capitalize {
+    text-transform: capitalize;
+}
